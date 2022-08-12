@@ -1,0 +1,267 @@
+:root {
+  --color-gray: #63666A;  /* #C5C5C5 */
+  --color-blue: #1b1b32;
+  --color-red: #880808;
+}
+
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;      /* default 16px x 62.5% = 10px, 這時2rem=20px */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 6.5rem;
+  background-color: var(--color-gray);  /* #C5C5C5 */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+}
+
+#headerLogo {
+  /* border: 1px solid red; */
+  height: 70%;
+  padding-left: 1rem;
+}
+
+#navbar {
+  /* border: 1px solid black; */
+  width: 50rem;
+  height: 100%;
+}
+
+.navUl {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+  width: 30rem;
+  margin: 0 4rem 0 auto;
+}
+
+.navUl > li {
+  /* border: 1px solid black; */
+  display: block;
+  height: 100%;
+  line-height: 6.5rem;  /* 要等同於header的高度 */
+}
+
+.navUl > li > a {
+  /* border: 1px solid black; */
+  text-decoration: none;
+  color: inherit;
+  font-size: 2rem;
+}
+
+.navUl > li:hover {
+  
+  background-color: black;
+  color: white;
+}
+/* header */
+
+/* welcomeSection */
+#welcome-section {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-blue);  /* #880808 */
+}
+
+#introMyself {
+  /* border: 1px solid red; */
+  font-size: 5rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  color: red;
+}
+
+#job {
+  /* border: 1px solid red; */
+  text-align: center;
+  font-size: 2.5rem;
+  font-style: italic;
+  color: var(--color-red);
+}
+/* welcomeSection */
+
+/* profolio */
+#projects {
+  /* border: 3px solid black; */
+  background-color: var(--color-red);
+  padding-top: 6.5rem;
+  border-bottom: 1px solid var(--color-red);
+}
+
+#projectHead {
+  font-size: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid black;
+
+  display: block;
+  width: 13rem;
+  margin: 0 auto;
+}
+
+.projectFrame {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  /* grid-template-columns: minmax(2rem,1fr) minmax(min-content, 6fr) minmax(2rem, 1fr); */
+  column-gap: 3rem;
+  row-gap: 3rem;
+  margin: 3rem 2rem;
+}
+
+.project-tile {
+  /* border: 1px solid black; */
+  grid-column: 1/2;
+
+}
+
+.project-tile4 {
+  /* border: 1px solid black; */
+  grid-column: 1/2;
+}
+
+.porjectImg {
+  /* border: 1px solid red; */
+  width: 100%;
+  /* max-width: 30rem; */
+  aspect-ratio: 4/3;  
+  /* 不用設置height，用比例3/4，有寬度，自然就有高度，即max-widht: 30rem; : 40rem */
+  /* max-height: 40rem; */
+  /* height: 40rem; */
+  /* 固定高度，不會縮放 */
+  object-fit: cover;
+
+  border-radius: 3px 3px 0 0;
+}
+
+.projectDescription {
+  /* border: 1px solid black; */
+  font-size: 2rem;
+  text-align: center;
+  height: 4rem;
+  line-height: 4rem;
+  background-color: var(--color-gray);
+  border-radius: 0 0 3px 3px;
+  
+  margin-top: -0.3rem;  /* 圖片與字符串之間有空白間隙 */
+}
+
+.project-tile a
+,.project-tile2 a
+,.project-tile3 a
+,.project-tile4 a  {
+  text-decoration: none;
+  color: black;
+}
+
+.codeSymbol {
+  color: var(--color-gray);
+}
+
+.project-tile a:hover .codeSymbol
+,.project-tile2 a:hover .codeSymbol
+,.project-tile3 a:hover .codeSymbol
+,.project-tile4 a:hover .codeSymbol {
+  /* border: 1px solid black; */
+  color: #880808;
+  transition: color 0.5s ease-in-out;
+}
+/* profolio */
+
+/* contact */
+#contact {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 80vh;
+  background-color: var(--color-gray);
+  border-bottom: 5px solid var(--color-red);
+}
+
+#contactHead {
+  /* border: 1px solid red; */
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.contactMethod {
+  /* border: 1px solid red; */
+  font-size: 2rem;
+}
+
+.contactMethod a {
+  /* border: 1px solid blue; */
+  padding: 0 1rem;
+  text-decoration: none;
+  color: black;
+
+  display: inline-block;  /* a不同於p，a要變成inline-block才可以有tranform的效果 */
+  transition: transform 0.3s ease-in-out;
+}
+
+.contactMethod a:hover {
+  transform: translateY(1rem);
+}
+/* contact */
+
+footer {
+  height: 10rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: var(--color-gray);
+}
+
+footer p {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 70rem) {
+  .projectFrame {
+    grid-template-columns: 1fr 1fr;
+  }
+  .project-tile4 {
+    grid-column: 2/3;
+  }
+}
+
+@media screen and (max-width: 46rem) {
+  .projectFrame {
+    grid-template-columns: 1fr;
+  }
+  .project-tile2, .project-tile3 {
+    grid-column: 1/2;
+  }
+  .project-tile4 {
+    grid-column: 1/2;
+  }
+}
