@@ -174,7 +174,13 @@ header {
 .project-tile a
 ,.project-tile2 a
 ,.project-tile3 a
-,.project-tile4 a  {
+,.project-tile4 a 
+,.project-tile5 a 
+,.project-tile6 a
+,.project-tile7 a
+,.project-tile8 a
+,.project-tile9 a
+{
   text-decoration: none;
   color: black;
 }
@@ -186,7 +192,13 @@ header {
 .project-tile a:hover .codeSymbol
 ,.project-tile2 a:hover .codeSymbol
 ,.project-tile3 a:hover .codeSymbol
-,.project-tile4 a:hover .codeSymbol {
+,.project-tile4 a:hover .codeSymbol
+,.project-tile5 a:hover .codeSymbol
+,.project-tile6 a:hover .codeSymbol
+,.project-tile7 a:hover .codeSymbol
+,.project-tile8 a:hover .codeSymbol
+,.project-tile9 a:hover .codeSymbol
+{
   /* border: 1px solid black; */
   color: #880808;
   transition: color 0.5s ease-in-out;
